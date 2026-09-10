@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>理想汽车 UX 设计 · 车载情感体验</title>
+<style>
+  :root { --bg:#0d1117; --panel:#161b22; --border:#30363d; --text:#e6edf3; --muted:#8b949e; --link:#58a6ff; --gold:#e3b341; --purple:#a371f7; }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,"PingFang SC","Microsoft YaHei",sans-serif; background:var(--bg); color:var(--text); line-height:1.75; font-size:15px; }
+  .wrap { max-width:980px; margin:0 auto; padding:48px 20px 70px; }
+  .topnav { font-size:13px; color:var(--muted); margin-bottom:22px; }
+  .topnav a { color:var(--link); text-decoration:none; }
+  header h1 { font-size:26px; font-weight:600; line-height:1.45; }
+  header .sub { color:var(--muted); margin-top:10px; font-size:14.5px; }
+  .tags { display:flex; flex-wrap:wrap; gap:8px; margin:16px 0 24px; }
+  .tag { font-size:12px; padding:2px 10px; border-radius:20px; border:1px solid var(--border); color:var(--muted); }
+  .tag.gold { border-color:rgba(227,179,65,.5); color:var(--gold); }
+  .tag.blue { border-color:rgba(88,166,255,.5); color:var(--link); }
+  .tag.purple { border-color:rgba(163,113,247,.5); color:var(--purple); }
+
+  .card { background:var(--panel); border:1px solid var(--border); border-radius:8px; padding:22px 26px; margin-bottom:22px; }
+  .card h2 { font-size:17px; font-weight:600; margin-bottom:14px; }
+  .card p { color:#c9d1d9; font-size:14.5px; margin-bottom:12px; }
+  .card ul { list-style:none; }
+  .card ul li { padding:5px 0 5px 18px; position:relative; font-size:14.5px; color:#c9d1d9; }
+  .card ul li::before { content:"▸"; position:absolute; left:0; color:var(--link); }
+
+  .preview-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(280px,1fr)); gap:14px; margin-top:6px; }
+  .preview-grid a { display:block; }
+  .preview-grid img { width:100%; border:1px solid var(--border); border-radius:6px; display:block; background:#000; transition:border-color .15s; }
+  .preview-grid img:hover { border-color:#8b949e; }
+
+  .hl { color:var(--gold); font-size:14px; margin-top:8px; }
+  footer { text-align:center; margin-top:48px; color:#6b7590; font-size:13px; line-height:2; }
+  footer a { color:var(--link); text-decoration:none; }
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="topnav"><a href="./">← 返回汽车项目专栏</a></div>
+
+    <header>
+      <h1>理想汽车 UX 设计 · 车载情感体验</h1>
+      <div class="sub">Design of In-Vehicle Emotional Experience Based on Multimodal Interaction</div>
+    </header>
+
+    <div class="tags">
+      <span class="tag gold">未来设计师 全国三等奖</span>
+      <span class="tag blue">智能座舱 HMI</span>
+      <span class="tag purple">多模态交互</span>
+      <span class="tag">校企合作</span>
+    </div>
+
+    <section class="card">
+      <h2>项目简介</h2>
+      <p>与理想汽车合作的校企合作项目，探索驾驶场景下人车双向交互的情感关怀方案。</p>
+      <ul>
+        <li><strong>用户研究</strong>　访谈理想汽车交互设计师与智能硬件产品资深设计师，梳理车主在通勤、早高峰、独自驾车等场景下的行为与情绪状态（疲惫、孤单、紧张）。</li>
+        <li><strong>痛点定义</strong>　驾驶中寻找娱乐内容操作不便且影响行车安全；驾驶员负面情绪无法被及时安抚。</li>
+        <li><strong>设计命题</strong>　如何提供双向交互的人车交互，让用户在更多场景下获得更丰富的感官体验与情感关怀。</li>
+        <li><strong>方案设计</strong>　基于多资源理论（Multiple Resource Theory）设计多模态输入与反馈机制，配合驾驶模式、免打扰模式、出行模式、个性化设置等功能模块，在保障驾驶安全的前提下实现情绪陪伴。</li>
+      </ul>
+      <div class="hl">获奖：未来设计师全国三等奖 ｜ 合作方：理想汽车</div>
+    </section>
+
+    <section class="card">
+      <h2>项目展板（6 页 · 点击看大图）</h2>
+      <div class="preview-grid">
+        <a href="./li-auto/A2-1.pdf" target="_blank"><img src="./li-auto/preview/A2-1.jpg" alt="展板 1"></a>
+        <a href="./li-auto/A2-2.pdf" target="_blank"><img src="./li-auto/preview/A2-2.jpg" alt="展板 2"></a>
+        <a href="./li-auto/A2-3.pdf" target="_blank"><img src="./li-auto/preview/A2-3.jpg" alt="展板 3"></a>
+        <a href="./li-auto/A2-4.pdf" target="_blank"><img src="./li-auto/preview/A2-4.jpg" alt="展板 4"></a>
+        <a href="./li-auto/A2-5.pdf" target="_blank"><img src="./li-auto/preview/A2-5.jpg" alt="展板 5"></a>
+        <a href="./li-auto/A2-6.pdf" target="_blank"><img src="./li-auto/preview/A2-6.jpg" alt="展板 6"></a>
+      </div>
+    </section>
+
+    <footer>
+      <p>© 2026 陶存心</p>
+      <p><a href="./">汽车项目专栏</a> · <a href="https://cunxintao-hub.github.io/">个人主页</a></p>
+    </footer>
+  </div>
+</body>
+</html>

@@ -8,33 +8,36 @@
   :root { --bg:#0d1117; --panel:#161b22; --border:#30363d; --text:#e6edf3; --muted:#8b949e; --link:#58a6ff; --gold:#e3b341; --purple:#a371f7; }
   * { margin:0; padding:0; box-sizing:border-box; }
   body { font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,"PingFang SC","Microsoft YaHei",sans-serif; background:var(--bg); color:var(--text); line-height:1.75; font-size:15px; }
-  .wrap { max-width:980px; margin:0 auto; padding:48px 20px 70px; }
-  .topnav { font-size:13px; color:var(--muted); margin-bottom:22px; }
+  .wrap { max-width:900px; margin:0 auto; padding:56px 20px 70px; }
+  .topnav { font-size:13px; color:var(--muted); margin-bottom:26px; }
   .topnav a { color:var(--link); text-decoration:none; }
-  header { margin-bottom:26px; }
-  header h1 { font-size:28px; font-weight:600; letter-spacing:.5px; }
-  header .sub { color:var(--muted); margin-top:8px; font-size:14.5px; }
 
-  .work { background:var(--panel); border:1px solid var(--border); border-radius:8px; overflow:hidden; margin-bottom:22px; }
-  .work .body { padding:24px 26px; position:relative; }
-  .work .num { position:absolute; top:22px; right:28px; font-size:34px; font-weight:700; color:#21262d; }
-  .work h2 { font-size:20px; font-weight:600; margin-bottom:6px; padding-right:70px; }
-  .work .meta { color:var(--muted); font-size:13.5px; margin-bottom:14px; display:flex; flex-wrap:wrap; gap:8px; }
+  header { text-align:center; margin-bottom:12px; }
+  header h1 { font-size:32px; font-weight:600; letter-spacing:1px; }
+  header .sub { color:var(--muted); margin-top:10px; font-size:15px; }
+  .notice { text-align:center; color:#6b7590; font-size:12.5px; margin:18px auto 44px; padding:10px 16px; max-width:640px; border:1px dashed var(--border); border-radius:6px; }
+
+  .zones { display:grid; grid-template-columns:1fr 1fr; gap:20px; }
+  @media (max-width:720px){ .zones { grid-template-columns:1fr; } }
+
+  .zone {
+    display:block; text-decoration:none; color:inherit;
+    background:var(--panel); border:1px solid var(--border); border-radius:10px; overflow:hidden;
+    transition:border-color .15s, transform .15s;
+  }
+  .zone:hover { border-color:#8b949e; transform:translateY(-3px); }
+  .zone .thumb { width:100%; aspect-ratio:16/9; object-fit:cover; display:block; background:#000; border-bottom:1px solid var(--border); }
+  .zone .body { padding:22px 24px 24px; }
+  .zone h2 { font-size:19px; font-weight:600; margin-bottom:8px; }
+  .zone .desc { color:var(--muted); font-size:14px; margin-bottom:14px; min-height:44px; }
+  .zone .meta { display:flex; flex-wrap:wrap; gap:8px; margin-bottom:16px; }
   .tag { font-size:12px; padding:2px 10px; border-radius:20px; border:1px solid var(--border); color:var(--muted); }
   .tag.gold { border-color:rgba(227,179,65,.5); color:var(--gold); }
   .tag.blue { border-color:rgba(88,166,255,.5); color:var(--link); }
   .tag.purple { border-color:rgba(163,113,247,.5); color:var(--purple); }
-  .work .desc { color:#c9d1d9; font-size:14.5px; margin-bottom:12px; }
-  .work ul { list-style:none; }
-  .work ul li { padding:4px 0 4px 18px; position:relative; font-size:14.5px; color:#c9d1d9; }
-  .work ul li::before { content:"▸"; position:absolute; left:0; color:var(--link); }
-  .work .hl { color:var(--gold); font-size:14px; margin-top:10px; }
-  .preview-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(240px,1fr)); gap:12px; margin-top:16px; }
-  .preview-grid a { display:block; }
-  .preview-grid img { width:100%; border:1px solid var(--border); border-radius:6px; display:block; background:#000; }
-  .preview-grid img:hover { border-color:#8b949e; }
+  .zone .go { color:var(--link); font-size:14px; font-weight:500; }
 
-  footer { text-align:center; margin-top:48px; color:#6b7590; font-size:13px; line-height:2; }
+  footer { text-align:center; margin-top:52px; color:#6b7590; font-size:13px; line-height:2; }
   footer a { color:var(--link); text-decoration:none; }
 </style>
 </head>
@@ -47,60 +50,41 @@
       <div class="sub">智能座舱 HMI · 飞行汽车交互 · 共 2 个项目</div>
     </header>
 
-    <!-- 01 -->
-    <section class="work">
-      <div class="body">
-        <div class="num">01</div>
-        <h2>理想汽车 UX 设计 · 车载情感体验</h2>
-        <div class="meta">
-          <span class="tag gold">未来设计师 全国三等奖</span>
-          <span class="tag blue">智能座舱 HMI</span>
-          <span class="tag purple">多模态交互</span>
-          <span class="tag">校企合作</span>
-        </div>
-        <p class="desc">与理想汽车合作的校企合作项目，主题为<strong>「基于多模态交互的车载情感体验设计」</strong>（Design of In-Vehicle Emotional Experience Based on Multimodal Interaction），探索驾驶场景下人车双向交互的情感关怀方案。</p>
-        <ul>
-          <li><strong>用户研究</strong>：访谈理想汽车交互设计师与智能硬件产品资深设计师，梳理车主在通勤、早高峰、独自驾车等场景下的行为与情绪状态（疲惫、孤单、紧张）</li>
-          <li><strong>痛点定义</strong>：驾驶中寻找娱乐内容操作不便且影响行车安全；驾驶员负面情绪无法被及时安抚</li>
-          <li><strong>设计命题</strong>：如何提供双向交互的人车交互，让用户在更多场景下获得更丰富的感官体验与情感关怀</li>
-          <li><strong>方案设计</strong>：基于多资源理论（Multiple Resource Theory）设计多模态输入与反馈机制，配合驾驶模式、免打扰模式、出行模式、个性化设置等功能模块，在保障驾驶安全的前提下实现情绪陪伴</li>
-        </ul>
-        <div class="preview-grid">
-          <a href="./li-auto/A2-1.pdf" target="_blank"><img src="./li-auto/preview/A2-1.jpg" alt="展板 1"></a>
-          <a href="./li-auto/A2-2.pdf" target="_blank"><img src="./li-auto/preview/A2-2.jpg" alt="展板 2"></a>
-          <a href="./li-auto/A2-3.pdf" target="_blank"><img src="./li-auto/preview/A2-3.jpg" alt="展板 3"></a>
-          <a href="./li-auto/A2-4.pdf" target="_blank"><img src="./li-auto/preview/A2-4.jpg" alt="展板 4"></a>
-          <a href="./li-auto/A2-5.pdf" target="_blank"><img src="./li-auto/preview/A2-5.jpg" alt="展板 5"></a>
-          <a href="./li-auto/A2-6.pdf" target="_blank"><img src="./li-auto/preview/A2-6.jpg" alt="展板 6"></a>
-        </div>
-        <div class="hl">获奖：未来设计师全国三等奖 ｜ 合作方：理想汽车（点击展板查看大图）</div>
-      </div>
-    </section>
+    <div class="notice">点击卡片进入项目详情</div>
 
-    <!-- 02 -->
-    <section class="work">
-      <div class="body">
-        <div class="num">02</div>
-        <h2>飞行汽车 HMI 教学实践平台搭建</h2>
-        <div class="meta">
-          <span class="tag gold">教育部产学研协同育人项目</span>
-          <span class="tag blue">复杂人机交互界面</span>
-          <span class="tag purple">飞行汽车</span>
-          <span class="tag">小鹏汽车 合作</span>
+    <div class="zones">
+
+      <!-- 01 理想汽车 -->
+      <a class="zone" href="./li-auto.html">
+        <img class="thumb" src="./li-auto/preview/A2-1.jpg" alt="理想汽车项目封面">
+        <div class="body">
+          <h2>01 · 理想汽车 UX 设计</h2>
+          <p class="desc">基于多模态交互的车载情感体验设计，与理想汽车合作的校企合作项目。</p>
+          <div class="meta">
+            <span class="tag gold">未来设计师 国三</span>
+            <span class="tag blue">智能座舱 HMI</span>
+            <span class="tag purple">多模态交互</span>
+          </div>
+          <span class="go">进入项目 →</span>
         </div>
-        <p class="desc">教育部产学研协同育人项目《<strong>复杂人机交互界面开发设计的教学实践平台搭建——以飞行汽车场景为例</strong>》，与小鹏汽车合作，面向飞行汽车这一新兴载运场景，搭建复杂人机交互界面（HMI）的开发设计教学实践平台，将产业真实需求转化为可教学、可实践的设计训练体系。</p>
-        <div class="preview-grid">
-          <a href="./l4-cockpit/overview.pdf" target="_blank"><img src="./l4-cockpit/preview/overview.jpg" alt="L4 智能座舱 总览"></a>
-          <a href="./l4-cockpit/board1.pdf" target="_blank"><img src="./l4-cockpit/preview/board1.jpg" alt="展板 1"></a>
-          <a href="./l4-cockpit/board2.pdf" target="_blank"><img src="./l4-cockpit/preview/board2.jpg" alt="展板 2"></a>
-          <a href="./l4-cockpit/board3.pdf" target="_blank"><img src="./l4-cockpit/preview/board3.jpg" alt="展板 3"></a>
-          <a href="./l4-cockpit/board4.pdf" target="_blank"><img src="./l4-cockpit/preview/board4.jpg" alt="展板 4"></a>
-          <a href="./l4-cockpit/board5.pdf" target="_blank"><img src="./l4-cockpit/preview/board5.jpg" alt="展板 5"></a>
-          <a href="./l4-cockpit/board6.pdf" target="_blank"><img src="./l4-cockpit/preview/board6.jpg" alt="展板 6"></a>
+      </a>
+
+      <!-- 02 飞行汽车 -->
+      <a class="zone" href="./flying-car.html">
+        <img class="thumb" src="./l4-cockpit/preview/overview.jpg" alt="飞行汽车项目封面">
+        <div class="body">
+          <h2>02 · 飞行汽车 HMI 平台</h2>
+          <p class="desc">复杂人机交互界面开发设计的教学实践平台搭建，教育部产学研项目。</p>
+          <div class="meta">
+            <span class="tag gold">教育部产学研</span>
+            <span class="tag blue">飞行汽车</span>
+            <span class="tag purple">小鹏汽车</span>
+          </div>
+          <span class="go">进入项目 →</span>
         </div>
-        <div class="hl">项目来源：教育部产学研协同育人项目 ｜ 合作方：小鹏汽车 ｜ 含 1 份完整展板 + 6 张分图（点击看大图）</div>
-      </div>
-    </section>
+      </a>
+
+    </div>
 
     <footer>
       <p>© 2026 陶存心</p>

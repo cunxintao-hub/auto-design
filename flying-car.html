@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>飞行汽车 HMI 教学实践平台搭建</title>
+<style>
+  :root { --bg:#0d1117; --panel:#161b22; --border:#30363d; --text:#e6edf3; --muted:#8b949e; --link:#58a6ff; --gold:#e3b341; --purple:#a371f7; }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,"PingFang SC","Microsoft YaHei",sans-serif; background:var(--bg); color:var(--text); line-height:1.75; font-size:15px; }
+  .wrap { max-width:980px; margin:0 auto; padding:48px 20px 70px; }
+  .topnav { font-size:13px; color:var(--muted); margin-bottom:22px; }
+  .topnav a { color:var(--link); text-decoration:none; }
+  header h1 { font-size:26px; font-weight:600; line-height:1.45; }
+  header .sub { color:var(--muted); margin-top:10px; font-size:14.5px; }
+  .tags { display:flex; flex-wrap:wrap; gap:8px; margin:16px 0 24px; }
+  .tag { font-size:12px; padding:2px 10px; border-radius:20px; border:1px solid var(--border); color:var(--muted); }
+  .tag.gold { border-color:rgba(227,179,65,.5); color:var(--gold); }
+  .tag.blue { border-color:rgba(88,166,255,.5); color:var(--link); }
+  .tag.purple { border-color:rgba(163,113,247,.5); color:var(--purple); }
+
+  .card { background:var(--panel); border:1px solid var(--border); border-radius:8px; padding:22px 26px; margin-bottom:22px; }
+  .card h2 { font-size:17px; font-weight:600; margin-bottom:14px; }
+  .card p { color:#c9d1d9; font-size:14.5px; margin-bottom:12px; }
+  .card ul { list-style:none; }
+  .card ul li { padding:5px 0 5px 18px; position:relative; font-size:14.5px; color:#c9d1d9; }
+  .card ul li::before { content:"▸"; position:absolute; left:0; color:var(--link); }
+
+  .preview-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(280px,1fr)); gap:14px; margin-top:6px; }
+  .preview-grid a { display:block; }
+  .preview-grid img { width:100%; border:1px solid var(--border); border-radius:6px; display:block; background:#000; transition:border-color .15s; }
+  .preview-grid img:hover { border-color:#8b949e; }
+
+  .hl { color:var(--gold); font-size:14px; margin-top:8px; }
+  footer { text-align:center; margin-top:48px; color:#6b7590; font-size:13px; line-height:2; }
+  footer a { color:var(--link); text-decoration:none; }
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="topnav"><a href="./">← 返回汽车项目专栏</a></div>
+
+    <header>
+      <h1>飞行汽车 HMI 教学实践平台搭建</h1>
+      <div class="sub">复杂人机交互界面开发设计的教学实践平台搭建——以飞行汽车场景为例</div>
+    </header>
+
+    <div class="tags">
+      <span class="tag gold">教育部产学研协同育人项目</span>
+      <span class="tag blue">复杂人机交互界面</span>
+      <span class="tag purple">飞行汽车</span>
+      <span class="tag">小鹏汽车 合作</span>
+    </div>
+
+    <section class="card">
+      <h2>项目简介</h2>
+      <p>面向飞行汽车这一新兴载运场景，搭建复杂人机交互界面（HMI）的开发设计教学实践平台，将产业真实需求转化为可教学、可实践的设计训练体系。</p>
+      <ul>
+        <li><strong>项目性质</strong>　教育部产学研协同育人项目，校企合作方为小鹏汽车。</li>
+        <li><strong>研究场景</strong>　飞行汽车（eVTOL）——兼具地面行驶与空中飞行的双重操控特征，人机交互复杂度远高于传统汽车。</li>
+        <li><strong>平台建设</strong>　构建复杂人机交互界面的开发设计教学实践体系，覆盖界面信息架构、多模态交互、安全冗余等核心模块。</li>
+        <li><strong>产学价值</strong>　把企业真实工程问题引入教学，形成可复用的实践平台与训练方法。</li>
+      </ul>
+      <div class="hl">项目来源：教育部产学研协同育人项目 ｜ 合作方：小鹏汽车</div>
+    </section>
+
+    <section class="card">
+      <h2>项目展板（7 份 · 点击看大图）</h2>
+      <div class="preview-grid">
+        <a href="./l4-cockpit/overview.pdf" target="_blank"><img src="./l4-cockpit/preview/overview.jpg" alt="总览"></a>
+        <a href="./l4-cockpit/board1.pdf" target="_blank"><img src="./l4-cockpit/preview/board1.jpg" alt="展板 1"></a>
+        <a href="./l4-cockpit/board2.pdf" target="_blank"><img src="./l4-cockpit/preview/board2.jpg" alt="展板 2"></a>
+        <a href="./l4-cockpit/board3.pdf" target="_blank"><img src="./l4-cockpit/preview/board3.jpg" alt="展板 3"></a>
+        <a href="./l4-cockpit/board4.pdf" target="_blank"><img src="./l4-cockpit/preview/board4.jpg" alt="展板 4"></a>
+        <a href="./l4-cockpit/board5.pdf" target="_blank"><img src="./l4-cockpit/preview/board5.jpg" alt="展板 5"></a>
+        <a href="./l4-cockpit/board6.pdf" target="_blank"><img src="./l4-cockpit/preview/board6.jpg" alt="展板 6"></a>
+      </div>
+    </section>
+
+    <footer>
+      <p>© 2026 陶存心</p>
+      <p><a href="./">汽车项目专栏</a> · <a href="https://cunxintao-hub.github.io/">个人主页</a></p>
+    </footer>
+  </div>
+</body>
+</html>
